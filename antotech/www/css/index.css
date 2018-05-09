@@ -1,0 +1,49 @@
+
+/*
+/////////KEEP This to make the button blink//////
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Roboto+Slab:400,700');
+html{
+    height: 100%;
+}
+figure{
+    margin-top: 2rem;
+}
+#antobot{
+    width:100%;
+}
+#antobot{
+    margin-top: 3rem;
+}
+figcaption{
+    margin: 0 3rem;
+    text-align: center;
+    padding: 0 1rem;
+    border: 1px solid grey;
+    background-color: deepskyblue;
+}
+.blink{
+	background:blue;
+	padding:5px 10px;
+	color:#fff;
+	border:none;
+	border-radius:5px;
+	
+	animation-name: flash;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+.nav{
+    list-style: none;
+}
