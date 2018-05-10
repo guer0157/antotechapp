@@ -53,3 +53,9 @@ figcaption{
 .list-view{
     margin-top: 2rem;
 }
+a#back_btn.link.left.icon.arrow_left::before{
+    color: navy;
+}
+span#filtro_btn.tab.icon{
+    color: navy;
+}

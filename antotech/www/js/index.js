@@ -91,8 +91,21 @@ let app = {
         setTimeout(function(){
         let header=document.createElement("header");
             body.prepend(header);
-        header.classList.add("bar");
-        header.classList.add("top");
+            header.classList.add("bar-half");
+            header.classList.add("top");
+        let span=document.createElement("a");
+            span.setAttribute("id","back_btn");
+            span.classList.add("link");
+            span.classList.add("left");
+            span.classList.add("icon");
+            span.classList.add("arrow_left");
+        let filtroMenu=document.createElement("span");
+            filtroMenu.setAttribute("id","filtro_btn");
+            filtroMenu.classList.add("tab");
+            filtroMenu.classList.add("icon");
+            filtroMenu.textContent="Filtros";
+            header.appendChild(span);
+            header.appendChild(filtroMenu)
             body.removeChild(overlay);
         },3000)
     }
