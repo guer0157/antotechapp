@@ -47,3 +47,9 @@ figcaption{
 .nav{
     list-style: none;
 }
+#overlayMsgs{
+    color: black;
+}
+.list-view{
+    margin-top: 2rem;
+}

@@ -202,7 +202,7 @@ blockquote::after {
     height: 100vh;
     position: fixed;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 200
 }
 
