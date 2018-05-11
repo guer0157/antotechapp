@@ -27,7 +27,7 @@ figcaption{
     background-color: deepskyblue;
 }
 .blink{
-	background:blue;
+	background:navy;
 	padding:5px 10px;
 	color:#fff;
 	border:none;
@@ -54,6 +54,7 @@ figcaption{
     margin-top: 2rem;
 }
 a#back_btn.link.left.icon.arrow_left::before{
+    font-size: 2rem;
     color: navy;
 }
 span#filtro_btn.tab.icon{
@@ -67,4 +68,9 @@ span#filtro_btn.tab.icon{
 }
 #programadores{
     margin-top: 2rem;
+}
+#encabezado{
+    background-color: black;
+    color: white;
+    text-align: center;
 }

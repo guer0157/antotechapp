@@ -21,10 +21,10 @@ let app = {
         let ingresar = document.getElementById("ingresar");
         ingresar.addEventListener('click', app.buildNav);
     },
-    buildNav: function (ev) {
-        
+    buildNav: function () {
         let home = document.getElementById("home");
         home.classList.remove("active");
+        let programadores=document.getElementById("programadores").classList.remove("active");
         let main = document.getElementById("main");
         main.classList.add("active");
         console.log(main);
@@ -32,12 +32,13 @@ let app = {
         let calendariobtn = document.getElementById('calendario');
         calendariobtn.addEventListener('click', app.clearPage);
         let productsbtn = document.getElementById('productos');
-        productsbtn.addEventListener('click', app.clearPage)
+        productsbtn.addEventListener('click', app.selectPage)
     },
-    clearPage: function (ev) {
+    selectPage: function (ev) {
         let elementClicked = ev.currentTarget.getAttribute("id");
 
         switch (elementClicked) {
+            case "back_btn":
             case "productos":
                 document.getElementById("main").classList.remove("active")
                 document.getElementById("programadores").classList.add("active")
@@ -62,9 +63,10 @@ let app = {
             let name = document.createElement('h1');
             name.setAttribute("id","list_title");
             name.textContent = progName;
-            let encabezado = document.createElement('h3');
+            let encabezado = document.createElement('p');
+            encabezado.setAttribute("id","encabezado");
             let progEncabezado = programador.Encabezado;
-            encabezado.textContent = progEncabezado;
+            encabezado.innerHTML = `<strong>${progEncabezado}<strong>`;
             let descripcion = document.createElement("p");
             descripcion.textContent = programador.Descripcion;
             card.appendChild(name);
@@ -108,8 +110,13 @@ let app = {
             header.appendChild(span);
             header.appendChild(filtroMenu)
             body.removeChild(overlay);
+            span=document.getElementById("back_btn");
+            span.addEventListener("click",app.buildNav);
         },3000)
+            
     }
+                                                                                                                                                                                                                                     
+    
 };
 let ready = ('deviceready' in document) ? 'deviceready' : 'DOMContentLoaded';
 document.addEventListener(ready, app.init);
