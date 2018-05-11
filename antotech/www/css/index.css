@@ -59,3 +59,12 @@ a#back_btn.link.left.icon.arrow_left::before{
 span#filtro_btn.tab.icon{
     color: navy;
 }
+#list_title{
+    text-align: center;
+    color: navy;
+    text-shadow: 7px 0px rgba(76, 66, 66, 0.1);
+    border-bottom: 1.5px solid rgba(76, 66, 66, 0.1); 
+}
+#programadores{
+    margin-top: 2rem;
+}

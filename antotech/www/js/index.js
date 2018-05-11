@@ -60,6 +60,7 @@ let app = {
             card.classList.add("card");
             let progName = programador.Nombre;
             let name = document.createElement('h1');
+            name.setAttribute("id","list_title");
             name.textContent = progName;
             let encabezado = document.createElement('h3');
             let progEncabezado = programador.Encabezado;
