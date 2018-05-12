@@ -30,25 +30,28 @@ let app = {
         console.log(main);
 
         let calendariobtn = document.getElementById('calendario');
-        calendariobtn.addEventListener('click', app.clearPage);
+        calendariobtn.addEventListener('click', app.selectPage);
         let productsbtn = document.getElementById('productos');
         productsbtn.addEventListener('click', app.selectPage)
     },
     selectPage: function (ev) {
+        console.log(ev);
         let elementClicked = ev.currentTarget.getAttribute("id");
-
+        let clearMain=document.getElementById("main").classList.remove("active")
         switch (elementClicked) {
             case "back_btn":
             case "productos":
-                document.getElementById("main").classList.remove("active")
+                clearMain
                 document.getElementById("programadores").classList.add("active")
                 app.buildProductPage()
                 break;
             case "calendario":
-                document.getElementById("main").classList.remove("active")
+                clearMain
                 document.getElementById("eventos").classList.add("active")
                 break;
-
+            case "contactanos":
+                clearMain
+                document.getElementById("contactanos").classList.add("active");
         }
     },
     buildProductPage: function () {
@@ -92,26 +95,7 @@ let app = {
             body.appendChild(overlay);
         
         setTimeout(function(){
-        let header=document.createElement("header");
-            body.prepend(header);
-            header.classList.add("bar-half");
-            header.classList.add("top");
-        let span=document.createElement("a");
-            span.setAttribute("id","back_btn");
-            span.classList.add("link");
-            span.classList.add("left");
-            span.classList.add("icon");
-            span.classList.add("arrow_left");
-        let filtroMenu=document.createElement("span");
-            filtroMenu.setAttribute("id","filtro_btn");
-            filtroMenu.classList.add("tab");
-            filtroMenu.classList.add("icon");
-            filtroMenu.textContent="Filtros";
-            header.appendChild(span);
-            header.appendChild(filtroMenu)
             body.removeChild(overlay);
-            span=document.getElementById("back_btn");
-            span.addEventListener("click",app.buildNav);
         },3000)
             
     }

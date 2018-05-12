@@ -10,6 +10,9 @@
 html{
     height: 100%;
 }
+#clear{
+    background-color: white;
+}
 figure{
     margin-top: 2rem;
 }
@@ -50,7 +53,7 @@ figcaption{
 #overlayMsgs{
     color: black;
 }
-.list-view{
+.list-view, #programadores, #eventos, #contacto{
     margin-top: 2rem;
 }
 a#back_btn.link.left.icon.arrow_left::before{
