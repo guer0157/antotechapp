@@ -77,3 +77,6 @@ span#filtro_btn.tab.icon{
     color: white;
     text-align: center;
 }
+#clear{
+    visibility: hidden;
+}

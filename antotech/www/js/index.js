@@ -35,15 +35,15 @@ let app = {
         productsbtn.addEventListener('click', app.selectPage)
     },
     selectPage: function (ev) {
-        console.log(ev);
+        console.log(ev,"Hello World");
         let elementClicked = ev.currentTarget.getAttribute("id");
+        let elementCleared = ev.currentTarget.getAttribute("data_id");
         let clearMain=document.getElementById("main").classList.remove("active")
         switch (elementClicked) {
-            case "back_btn":
             case "productos":
                 clearMain
                 document.getElementById("programadores").classList.add("active")
-                app.buildProductPage()
+                app.buildProductPage("productos")
                 break;
             case "calendario":
                 clearMain
@@ -52,10 +52,16 @@ let app = {
             case "contactanos":
                 clearMain
                 document.getElementById("contactanos").classList.add("active");
+                break;
+            case "bar-hal top":
+                document.getElementById(elementCleared).classList.remove("active");
+                document.getElementById("main").classList.add("active");
+                break;
         }
     },
-    buildProductPage: function () {
-        
+    buildProductPage: function (ev) {
+        let targetDiv=ev;
+        console.log(targetDiv);
         let programadores = productos.Programadores;
         let programadoresHome = document.getElementById("programadores");
         let df = new DocumentFragment;
@@ -95,10 +101,18 @@ let app = {
             body.appendChild(overlay);
         
         setTimeout(function(){
-            body.removeChild(overlay);
+        let back_btn=document.getElementById("clear");
+        back_btn.removeAttribute('id');
+        back_btn.setAttribute('data_id',targetDiv);
+        back_btn.addEventListener("click", app.backHome);
+        body.removeChild(overlay);
         },3000)
+        
             
-    }
+    },
+    backHome:function(ev){
+        app.selectPage(ev);
+    } 
                                                                                                                                                                                                                                      
     
 };
