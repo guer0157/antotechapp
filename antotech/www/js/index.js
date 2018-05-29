@@ -108,11 +108,8 @@ let app = {
         back_home.setAttribute("data", progid);
         back_home.addEventListener("click", app.backHome);
         body.removeChild(overlay);
-        },3000)
-        
-            
+        },3000)     
     },
-    //////////////////\\\\\\
     buildCalendar: function(ev){
         let progid=document.getElementById('eventos').getAttribute('id');
         let headerShow=document.getElementById('clear');
@@ -122,7 +119,6 @@ let app = {
         console.log(backhome);
         backhome.addEventListener('click', app.backHome);
     },
-    ////////\\\\\\\\\\\\\\\\\\
     backHome:function(ev){
         console.log(ev.currentTarget);
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
