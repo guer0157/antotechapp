@@ -19,7 +19,7 @@
 -->
 <html>
     <head>
-        <!--
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,37 +28,90 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://www.antotech.com.mx https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" href="./css/tinyshell.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/index.css">
-        <title>Antotech</title>
-    </head>
-    <body>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://www.antotech.com.mx https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="./css/tinyshell.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <title>Antotech</title>
+</head>
+
+<body>
     <header id="clear" class="bar-half top">
         <div id="back_btn" class="tab icon arrow_left"></div>
         <div id="forward" class="tab icon arrow_right"></div>
     </header>
-     <figure id="home" class="page active">
-         <img id="antobot" src="./img/antotech%20logo.jpg" alt="AntoBot Antotechs Mascot">
-         <figcaption id="ingresar" class="blink">Ingresar</figcaption>
-     </figure>
-     <div id="main" class="page">
-         <ul class="list-view">
-             <li id="productos" class="list-item"><p>Productos</p></li>
-             <li id="calendario" class="list-item"><p>Calendario de Eventos</p></li>             
-             <li id="contactanos" class="list-item"><p>Contactanos</p></li>
-         </ul>
-     </div>
-     <div id="programadores" class=page></div>
-     <div id="eventos" class="page"><h1>Eventos</h1></div>
-     <div id="contacto" class="page"></div>
+    <figure id="home" class="page active">
+        <img id="antobot" src="./img/antotech%20logo.jpg" alt="AntoBot Antotechs Mascot">
+        <figcaption id="ingresar" class="blink">Ingresar</figcaption>
+    </figure>
+    <div id="main" class="page">
+        <ul class="list-view">
+            <li id="productos" class="list-item">
+                <p>Productos</p>
+            </li>
+            <li id="calendario" class="list-item">
+            <p>Eventos</p>
+            </li>
+            <li id="contactanos" class="list-item">
+                <p>Contactanos</p>
+            </li>
+        </ul>
+    </div>
+    <div id="programadores" class=page></div>
+    
+       <div id="eventos" class="page">
+                <div class="event-calendar">
+                    <div class="head">
+                        <p class="top-line">upcoming events</p>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="event-list">
+                        <a href="#" class="event">
+                            <div class="event-container">
+                                <span class="date-container">
+          <span class="date">31<span class="month">may</span></span>
+                                </span>
+                                <span class="detail-container">
+          <span class="title">linden hills farmers market</span>
+                                <span class="description">Every other Sunday</span>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                        <a href="#" class="event">
+                            <div class="event-container">
+                                <span class="date-container">
+            <span class="date">06<span class="month">jun</span></span>
+                                </span>
+                                <span class="detail-container">
+            <span class="title">minneapolis farmers market</span>
+                                <span class="description">Every Saturday</span>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                        <a href="#" class="event">
+                            <div class="event-container">
+                                <span class="date-container">
+            <span class="date">13<span class="month">jun</span></span>
+                                </span>
+                                <span class="detail-container">
+            <span class="title">minneapolis farmers market</span>
+                                <span class="description">Every Saturday</span>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="spacer"></div>
+                    </div>
+                </div>
+            </div>
+    <div id="contacto" class="page"></div>
 
-<!--        <script type="text/javascript" src="cordova.js"></script>-->
-       <script type="text/javascript" src="js/tinyshell.min.js"></script>
-       <script type="text/javascript" src="js/database.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <!--        <script type="text/javascript" src="cordova.js"></script>-->
+    <script type="text/javascript" src="js/tinyshell.min.js"></script>
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

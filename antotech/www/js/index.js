@@ -43,11 +43,12 @@ let app = {
             case "productos":
                 clearMain
                 document.getElementById("programadores").classList.add("active")
-                app.buildProductPage("productos")
+                app.buildProductPage();
                 break;
             case "calendario":
                 clearMain
                 document.getElementById("eventos").classList.add("active")
+                app.buildCalendar();
                 break;
             case "contactanos":
                 clearMain
@@ -110,6 +111,9 @@ let app = {
         },3000)
         
             
+    },
+    buildCalendar: function(){
+        
     },
     backHome:function(ev){
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
