@@ -128,9 +128,8 @@ width: 100%;
 }
 
 .event-container {
-  color: rgb(171, 171, 171);
+  color: navy;
   transition: all 0.2s ease;
-  background: rgb(253, 248, 228);
   border-left: 3px solid;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -138,7 +137,7 @@ width: 100%;
 
 .event-container:hover {
   border-left-width: .5em;
-  background:#ECEFF1;
+  background:navy;
 }
 
 .date-container {
@@ -150,7 +149,7 @@ width: 100%;
   margin-right: 1em;
   font-family: Oswald;
   font-weight: 700;
-  color:#8D6E63;
+  color:deepskyblue;
 }
 
 .date {
@@ -176,11 +175,11 @@ width: 100%;
   font-family:Oswald;
   font-weight:400;
   font-size:1.5em;
-  color:#8D6E63;
+  color:navy;
 }
 
 .description {
   display:block;
   font-size:0.9em;
-  color:#4DD0E1;
+  color:black;
 }
