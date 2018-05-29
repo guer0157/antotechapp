@@ -35,9 +35,9 @@ let app = {
         productsbtn.addEventListener('click', app.selectPage)
     },
     selectPage: function (ev) {
-        console.log(ev,"Hello World");
         let elementClicked = ev.currentTarget.getAttribute("id");
-        let elementCleared = ev.currentTarget.getAttribute("data_id");
+        let elementCleared = ev.currentTarget.getAttribute("data");
+        console.log(elementCleared)
         let clearMain=document.getElementById("main").classList.remove("active")
         switch (elementClicked) {
             case "productos":
@@ -53,17 +53,17 @@ let app = {
                 clearMain
                 document.getElementById("contactanos").classList.add("active");
                 break;
-            case "bar-hal top":
+            case "back_btn":
                 document.getElementById(elementCleared).classList.remove("active");
                 document.getElementById("main").classList.add("active");
                 break;
         }
     },
     buildProductPage: function (ev) {
-        let targetDiv=ev;
-        console.log(targetDiv);
+
         let programadores = productos.Programadores;
         let programadoresHome = document.getElementById("programadores");
+        let progid= programadoresHome.getAttribute("id");
         let df = new DocumentFragment;
         programadores.forEach(programador => {
             let card = document.createElement("div");
@@ -101,16 +101,18 @@ let app = {
             body.appendChild(overlay);
         
         setTimeout(function(){
-        let back_btn=document.getElementById("clear");
-        back_btn.removeAttribute('id');
-        back_btn.setAttribute('data_id',targetDiv);
-        back_btn.addEventListener("click", app.backHome);
+        let nav_bar=document.getElementById("clear");
+        nav_bar.removeAttribute('id');
+        let back_home=document.getElementById("back_btn");
+        back_home.setAttribute("data", progid);
+        back_home.addEventListener("click", app.backHome);
         body.removeChild(overlay);
         },3000)
         
             
     },
     backHome:function(ev){
+        document.querySelector(".bar-half.top").setAttribute('id',"clear");
         app.selectPage(ev);
     } 
                                                                                                                                                                                                                                      
