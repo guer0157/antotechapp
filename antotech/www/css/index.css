@@ -98,8 +98,8 @@ width: 100%;
   font-weight: 400;
   font-size: 3.5em;
   text-transform: capitalize;
-  text-shadow:3px 3px #6D4C41;
-  color: rgb(253, 248, 228);
+  text-shadow:3px 3px deepskyblue;
+  color: navy;
 }
 
 .spacer {
