@@ -112,9 +112,16 @@ let app = {
         
             
     },
-    buildCalendar: function(){
-        
+    //////////////////\\\\\\
+    buildCalendar: function(ev){
+        console.log(ev);
+        let headerShow=document.getElementById('clear');
+        headerShow.removeAttribute('id');
+        let backhome=document.getElementById('back_btn')
+        backhome.setAttribute('data', "eventos");
+        backhome.addEventListener('click', app.backhome);
     },
+    ////////\\\\\\\\\\\\\\\\\\
     backHome:function(ev){
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
         app.selectPage(ev);
