@@ -48,7 +48,7 @@ let app = {
             case "calendario":
                 clearMain
                 document.getElementById("eventos").classList.add("active")
-                app.buildCalendar();
+                app.buildCalendar(ev);
                 break;
             case "contactanos":
                 clearMain
@@ -114,15 +114,17 @@ let app = {
     },
     //////////////////\\\\\\
     buildCalendar: function(ev){
-        console.log(ev);
+        let progid=document.getElementById('eventos').getAttribute('id');
         let headerShow=document.getElementById('clear');
         headerShow.removeAttribute('id');
         let backhome=document.getElementById('back_btn')
-        backhome.setAttribute('data', "eventos");
-        backhome.addEventListener('click', app.backhome);
+        backhome.setAttribute('data', progid);
+        console.log(backhome);
+        backhome.addEventListener('click', app.backHome);
     },
     ////////\\\\\\\\\\\\\\\\\\
     backHome:function(ev){
+        console.log(ev.currentTarget);
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
         app.selectPage(ev);
     } 
