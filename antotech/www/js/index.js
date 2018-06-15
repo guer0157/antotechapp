@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 let app = {
     init: function () {
         let ingresar = document.getElementById("ingresar");
@@ -116,15 +117,15 @@ let app = {
         headerShow.removeAttribute('id');
         let backhome=document.getElementById('back_btn')
         backhome.setAttribute('data', progid);
-        console.log(backhome);
         backhome.addEventListener('click', app.backHome);
+        let events= document.querySelectorAll()
     },
     backHome:function(ev){
         console.log(ev.currentTarget);
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
         app.selectPage(ev);
     } 
-                                                                                                                                                                                                                                     
+         console.log("this");                                                                                                                                                                                                                            
     
 };
 let ready = ('deviceready' in document) ? 'deviceready' : 'DOMContentLoaded';
