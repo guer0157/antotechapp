@@ -64,7 +64,7 @@ let app = {
     buildProductMenu: function(ev){
         let listOfPDiv= document.createElement("div");
         let programadoresPage=document.getElementById("programadores");
-        let 
+        console.log(ev);
     },
     buildProductPage: function (ev) {
 
