@@ -44,7 +44,7 @@ let app = {
             case "productos":
                 clearMain
                 document.getElementById("programadores").classList.add("active");
-                app.buildProductMenu();
+                app.buildProductMenu(ev);
                 break;
             case "calendario":
                 clearMain
