@@ -39,16 +39,16 @@ let app = {
         let elementClicked = ev.currentTarget.getAttribute("id");
         let elementCleared = ev.currentTarget.getAttribute("data");
         console.log(elementCleared)
-        let clearMain=document.getElementById("main").classList.remove("active")
+        let clearMain=document.getElementById("main").classList.remove("active");
         switch (elementClicked) {
             case "productos":
                 clearMain
-                document.getElementById("programadores").classList.add("active")
-                app.buildProductPage();
+                document.getElementById("programadores").classList.add("active");
+                app.buildProductMenu();
                 break;
             case "calendario":
                 clearMain
-                document.getElementById("eventos").classList.add("active")
+                document.getElementById("eventos").classList.add("active");
                 app.buildCalendar(ev);
                 break;
             case "contactanos":
@@ -60,6 +60,11 @@ let app = {
                 document.getElementById("main").classList.add("active");
                 break;
         }
+    },
+    buildProductMenu: function(ev){
+        let listOfPDiv= document.createElement("div");
+        let programadoresPage=document.getElementById("programadores");
+        let 
     },
     buildProductPage: function (ev) {
 
@@ -91,17 +96,17 @@ let app = {
         let overlay=document.createElement("div");
             overlay.classList.add("overlay");
         let overlayCard=document.createElement("div");
-            overlayCard.classList.add("card");
             overlay.appendChild(overlayCard);
         let overlayMsg=document.createElement("p");
             overlayMsg.setAttribute("id", "overlayMsgs");
             overlayMsg.innerHTML="<strong>Producto Destacado<strong>";
             overlayCard.appendChild(overlayMsg);
         let overlayPic=document.createElement('img');
+            overlayPic.setAttribute("id","featured_product")
             overlayPic.src="./img/t-300.png";
             overlayCard.appendChild(overlayPic);
             body.appendChild(overlay);
-        
+     
         setTimeout(function(){
         let nav_bar=document.getElementById("clear");
         nav_bar.removeAttribute('id');
@@ -118,15 +123,12 @@ let app = {
         let backhome=document.getElementById('back_btn')
         backhome.setAttribute('data', progid);
         backhome.addEventListener('click', app.backHome);
-        let events= document.querySelectorAll()
     },
     backHome:function(ev){
         console.log(ev.currentTarget);
         document.querySelector(".bar-half.top").setAttribute('id',"clear");
         app.selectPage(ev);
-    } 
-         console.log("this");                                                                                                                                                                                                                            
-    
+    }                                     
 };
 let ready = ('deviceready' in document) ? 'deviceready' : 'DOMContentLoaded';
 document.addEventListener(ready, app.init);

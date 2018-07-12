@@ -51,10 +51,22 @@ figcaption{
     list-style: none;
 }
 #overlayMsgs{
-    color: black;
+    position: absolute;
+    top:1rem;
+    left:.1rem;
+    text-align: center;
+    color: white;
+    font-size:2rem;
+    width: 15rem;
 }
 .list-view, #programadores, #eventos, #contacto{
     margin-top: 2rem;
+}
+#featured_product{
+    width: 14rem;
+    position: absolute;
+    left: .6rem;
+    top: 8rem;
 }
 a#back_btn.link.left.icon.arrow_left::before{
     font-size: 2rem;
