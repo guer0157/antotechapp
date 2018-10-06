@@ -30,12 +30,6 @@ figcaption{
     background-color: deepskyblue;
 }
 .blink{
-	background:navy;
-	padding:5px 10px;
-	color:#fff;
-	border:none;
-	border-radius:5px;
-	
 	animation-name: flash;
 	animation-duration: 1s;
 	animation-timing-function: linear;
